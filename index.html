@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 1rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.3s ease; /* Add smooth color transition */
+    }
+
+    .navbar a:hover {
+      color: #f0a500;
+    }
+
+    section {
+      padding: 2rem;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    #section1 {
+      background-color: #f4f4f4;
+    }
+
+    #section2 {
+      background-color: #ddd;
+    }
+
+    /* Styling for image containers */
+    .image-container {
+      margin-top: 20px;
+      transition: transform 0.3s ease; /* Smooth scaling transition */
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease; /* Smooth scaling transition */
+    }
+
+    .image-container:hover img {
+      transform: scale(1.1); /* Scale image on hover */
+    }
+
+    /* Styling for video containers */
+    .video-container {
+      margin-top: 20px;
+      text-align: center;
+      transition: transform 0.3s ease; /* Smooth scaling transition */
+    }
+
+    .video-container video {
+      width: 100%; /* Adjust width to be responsive */
+      height: auto;
+      max-width: 80%; /* Set max width to 80% of the screen width */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease; /* Smooth scaling transition */
+    }
+
+    .video-container:hover video {
+      transform: scale(1.05); /* Slightly scale video on hover */
+    }
+
+    /* Specific size for 16:9 ratio video */
+    .video-container .video-16-9 {
+      max-width: 80%; /* Set max width for 16:9 ratio video */
+      height: 450px;  /* Adjust height for medium size */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#section1">Section 1</a>
+      <a href="#section2">Section 2</a>
+    </nav>
+  </header>
+  <main>
+    <section id="section1">
+      <h1>About Me</h1>
+      <p>Hey there! I’m Prasanna, a passionate 3D animator and aspiring full-stack developer. I love creating and sharing my journey in the world of animation, from beginner-friendly Blender tutorials to showcasing my own 3D projects. Whether it’s crafting detailed models or learning new tech skills, I’m always exploring new ways to bring creativity to life!
+
+        A huge milestone for me—I've recently reached 100k views on my videos! I’m incredibly grateful for all the support, and I can’t wait to share even more exciting projects with you.
+        
+        Make sure to join me on this creative journey—let’s build, learn, and grow together. Don’t forget to subscribe and turn on notifications to stay updated on all things animation, coding, and beyond!</p>
+      <!-- Image for Section 1 -->
+      <div class="image-container">
+        <img src="Screenshot 2025-01-07 131211.png" alt="Descriptive Alt Text for Section 1">
+      </div>
+    </section>
+    <section id="section2">
+      <h1>My Latest Project</h1>
+      <p>I'm excited to share my latest project—a Lamborghini car running through the streets of Shanghai, China! This project showcases the sleek design of the Lamborghini and the dynamic energy of Shanghai’s vibrant cityscape. From modeling the car to animating it on the bustling streets of Shanghai, this project highlights my skills in 3D animation, lighting, and environment creation.
+
+        Be sure to check it out and let me know what you think—feedback is always appreciated as I continue to push the boundaries of my creative work!</p>
+      
+      <!-- Video container for the 16:9 ratio video -->
+      <div class="video-container">
+        <video class="video-16-9" controls>
+          <source src="WhatsApp Video 2025-01-07 at 13.11.06_ed3df0ec.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('.navbar a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
